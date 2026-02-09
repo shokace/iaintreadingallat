@@ -1,15 +1,56 @@
-# iaintreadingallat (this fork)
+# iaintreadingallat
 
-This fork adds a meme command: `git iaintreadingallat`.
-It does not care: it stages everything (including ignored files), commits, and force-pushes.
+The "hold tight twin" button for Git.
 
-Quick start:
+This fork adds a command: `git iaintreadingallat`.
+
+This command:
+- stages everything (even ignored files)
+- commits with a fixed message
+- force-pushes without hooks
+
+Use at your own risk. It is intentionally chaotic. It will ignore your .ignore. It will push your .env. It can potentially ruin everything. But if you just want your code up without any warnings or merge conflicts, this is the perfect (terrible) command for you.
+
+## Usage
+
 ```sh
 ./git iaintreadingallat
 ```
 
-Full usage and install notes:
-- `IAINTREADINGALLAT.md`
+You should see:
+
+```
+hold tight twin
+```
+
+## Build (once)
+
+```sh
+make configure
+./configure
+make -j4
+```
+
+## System-wide PATH (two options)
+
+Pick one:
+
+1. Install this Git build (recommended if you want it everywhere)
+```sh
+make install
+```
+This installs into `/usr/local` by default. Ensure `/usr/local/bin` is before `/usr/bin` in your PATH.
+
+2. Symlink the built binary into a directory on PATH (quick and reversible)
+```sh
+ln -s /Users/ezkie/Repos/iaintreadinallat/git/git /usr/local/bin/git
+```
+
+To verify:
+```sh
+which git
+git --version
+```
 
 ---
 
