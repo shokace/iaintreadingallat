@@ -1,3 +1,18 @@
+# iaintreadingallat (this fork)
+
+This fork adds a meme command: `git iaintreadingallat`.
+It does not care: it stages everything (including ignored files), commits, and force-pushes.
+
+Quick start:
+```sh
+./git iaintreadingallat
+```
+
+Full usage and install notes:
+- `IAINTREADINGALLAT.md`
+
+---
+
 [![Build status](https://github.com/git/git/workflows/CI/badge.svg)](https://github.com/git/git/actions?query=branch%3Amaster+event%3Apush)
 
 Git - fast, scalable, distributed revision control system
