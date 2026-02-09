@@ -1,0 +1,67 @@
+http-walker.o: http-walker.c git-compat-util.h compat/posix.h \
+  /opt/local/include/iconv.h compat/../sane-ctype.h \
+  compat/precompose_utf8.h compat/bswap.h wrapper.h banned.h \
+  repository.h strmap.h hashmap.h repo-settings.h hex.h hash.h \
+  sha1dc_git.h sha1dc/sha1.h sha256/block/sha256.h hex-ll.h walker.h \
+  remote.h refspec.h string-list.h strvec.h http.h git-zlib.h \
+  compat/zlib-compat.h /opt/local/include/zlib.h \
+  /opt/local/include/zconf.h /opt/local/include/curl/curl.h \
+  /opt/local/include/curl/curlver.h /opt/local/include/curl/system.h \
+  /opt/local/include/curl/easy.h /opt/local/include/curl/multi.h \
+  /opt/local/include/curl/urlapi.h /opt/local/include/curl/options.h \
+  /opt/local/include/curl/header.h /opt/local/include/curl/websockets.h \
+  /opt/local/include/curl/mprintf.h gettext.h strbuf.h list.h \
+  transport.h run-command.h thread-utils.h list-objects-filter-options.h \
+  object.h packfile.h odb.h oidset.h khash.h oidmap.h object-file.h
+git-compat-util.h:
+compat/posix.h:
+/opt/local/include/iconv.h:
+compat/../sane-ctype.h:
+compat/precompose_utf8.h:
+compat/bswap.h:
+wrapper.h:
+banned.h:
+repository.h:
+strmap.h:
+hashmap.h:
+repo-settings.h:
+hex.h:
+hash.h:
+sha1dc_git.h:
+sha1dc/sha1.h:
+sha256/block/sha256.h:
+hex-ll.h:
+walker.h:
+remote.h:
+refspec.h:
+string-list.h:
+strvec.h:
+http.h:
+git-zlib.h:
+compat/zlib-compat.h:
+/opt/local/include/zlib.h:
+/opt/local/include/zconf.h:
+/opt/local/include/curl/curl.h:
+/opt/local/include/curl/curlver.h:
+/opt/local/include/curl/system.h:
+/opt/local/include/curl/easy.h:
+/opt/local/include/curl/multi.h:
+/opt/local/include/curl/urlapi.h:
+/opt/local/include/curl/options.h:
+/opt/local/include/curl/header.h:
+/opt/local/include/curl/websockets.h:
+/opt/local/include/curl/mprintf.h:
+gettext.h:
+strbuf.h:
+list.h:
+transport.h:
+run-command.h:
+thread-utils.h:
+list-objects-filter-options.h:
+object.h:
+packfile.h:
+odb.h:
+oidset.h:
+khash.h:
+oidmap.h:
+object-file.h:

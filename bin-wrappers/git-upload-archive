@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# wrap-for-bin.sh: Template for git executable wrapper scripts
+# to run test suite against sandbox, but with only bindir-installed
+# executables in PATH.  The Makefile copies this into various
+# files in bin-wrappers, substituting
+# /Users/ezkie/Repos/iaintreadinallat/git, /Users/ezkie/Repos/iaintreadinallat/git/templates/blt and /Users/ezkie/Repos/iaintreadinallat/git/git-upload-archive.
+
+GIT_EXEC_PATH='/Users/ezkie/Repos/iaintreadinallat/git'
+if test -n "$NO_SET_GIT_TEMPLATE_DIR"
+then
+	unset GIT_TEMPLATE_DIR
+else
+	GIT_TEMPLATE_DIR='/Users/ezkie/Repos/iaintreadinallat/git/templates/blt'
+	export GIT_TEMPLATE_DIR
+fi
+MERGE_TOOLS_DIR='/Users/ezkie/Repos/iaintreadinallat/git/mergetools'
+GITPERLLIB='/Users/ezkie/Repos/iaintreadinallat/git/perl/build/lib'"${GITPERLLIB:+:$GITPERLLIB}"
+GIT_TEXTDOMAINDIR='/Users/ezkie/Repos/iaintreadinallat/git/po/build/locale'
+PATH='/Users/ezkie/Repos/iaintreadinallat/git/bin-wrappers:'"$PATH"
+
+export MERGE_TOOLS_DIR GIT_EXEC_PATH GITPERLLIB PATH GIT_TEXTDOMAINDIR
+
+case "$GIT_DEBUGGER" in
+'')
+	exec "/Users/ezkie/Repos/iaintreadinallat/git/git-upload-archive" "$@"
+	;;
+1)
+	unset GIT_DEBUGGER
+	exec gdb --args "/Users/ezkie/Repos/iaintreadinallat/git/git-upload-archive" "$@"
+	;;
+*)
+	GIT_DEBUGGER_ARGS="$GIT_DEBUGGER"
+	unset GIT_DEBUGGER
+	exec ${GIT_DEBUGGER_ARGS} "/Users/ezkie/Repos/iaintreadinallat/git/git-upload-archive" "$@"
+	;;
+esac

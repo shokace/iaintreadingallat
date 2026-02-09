@@ -1,0 +1,1 @@
+   -framework CoreServices -L/opt/local/lib -L/opt/homebrew/opt/gettext/lib
