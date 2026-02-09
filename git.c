@@ -587,6 +587,7 @@ static struct cmd_struct commands[] = {
 	{ "hash-object", cmd_hash_object },
 	{ "help", cmd_help },
 	{ "hook", cmd_hook, RUN_SETUP },
+	{ "iaintreadingallat", cmd_iaintreadingallat, RUN_SETUP | NEED_WORK_TREE },
 	{ "index-pack", cmd_index_pack, RUN_SETUP_GENTLY | NO_PARSEOPT },
 	{ "init", cmd_init_db },
 	{ "init-db", cmd_init_db },

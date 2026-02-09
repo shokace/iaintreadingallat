@@ -1,0 +1,25 @@
+=git-iaintreadingallat(1)
+
+NAME
+----
+git-iaintreadingallat - add everything (including ignored), commit, and force-push
+
+SYNOPSIS
+--------
+[verse]
+'git iaintreadingallat'
+
+DESCRIPTION
+-----------
+This command stages all changes, including ignored files, commits them with a
+fixed message, and force-pushes to the current branch while skipping hooks.
+
+It is intentionally destructive and can leak ignored files or rewrite history.
+
+OPTIONS
+-------
+None.
+
+EXAMPLES
+--------
+`git iaintreadingallat`
