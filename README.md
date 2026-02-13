@@ -43,7 +43,7 @@ This installs into `/usr/local` by default. Ensure `/usr/local/bin` is before `/
 
 2. Symlink the built binary into a directory on PATH (quick and reversible)
 ```sh
-ln -s /Users/ezkie/Repos/iaintreadinallat/git/git /usr/local/bin/git
+ln -s "$PWD/git" /usr/local/bin/git
 ```
 
 To verify:
